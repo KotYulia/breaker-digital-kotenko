@@ -1,0 +1,58 @@
+.main-content {
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 3rem 0;
+  }
+  .main-page-title {
+    border-bottom: 3px solid #d81406;
+  }
+  h2 {
+    font: 400 28px 'Alternate Got No1 D', regular;
+    text-transform: uppercase;
+    color: #d61919;
+    padding-bottom: 10px;
+    border-bottom: 5px dashed #b5cbd1;
+    text-align: center;
+    margin-top: 40%;
+  }
+  .directors-works-list {
+    margin: 0;
+    padding: 0 0 10rem;
+    li {
+      padding: 3rem 0;
+      border-bottom: 3px solid #d81406;
+    }
+  }
+  .directors-link-page {
+    text-align: center;
+    a {
+      font: 300 28px 'Akzidenz Grotesk B E', lightCn;
+      text-transform: uppercase;
+      color: #b5cbd1;
+      display: block;
+      margin-top: 40%;
+      text-decoration: none;
+      &:hover {
+        color: #d61919;
+        font-size: 32px;
+      }
+      .fa {
+        display: block;
+        color: #d61919;
+        &:hover {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .page-title {
+      font-size: 50px;
+      padding-left: 10px;
+    }
+  }
+}

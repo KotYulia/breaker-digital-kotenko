@@ -1,0 +1,55 @@
+.main-content {
+  .main-info {
+    p {
+      font-size: 4.2rem;
+      padding: 7rem 0;
+      line-height: 5rem;
+    }
+  }
+  .media-block {
+    border-top: 3px solid #d81406;
+    padding: 4.5rem 0 8.5rem;
+    .media-list {
+      li {
+        padding-bottom: 5rem;
+        img {
+          margin-bottom: 2rem;
+        }
+      }
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .main-info {
+      p {
+        font-size: 2.6rem;
+        padding: 4rem 0 2rem;
+        line-height: 3.4rem;
+      }
+    }
+    .main-title {
+      font-size: 4rem;
+    }
+    .media-block {
+      padding: 4.5rem 0 3rem;
+
+      .media-list {
+        li {
+          padding-bottom: 3rem;
+          img {
+            margin-bottom: 2rem;
+          }
+        }
+        span {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+}

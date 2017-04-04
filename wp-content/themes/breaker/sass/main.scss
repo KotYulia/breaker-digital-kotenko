@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "Alternate Got No 1 D";
+	src: url('../fonts/Alternate Gothic No1 D Regular.otf');
+	src: url('../fonts/Alternate Gothic No1 D Regular.eot');
+	src: url('../fonts/Alternate Gothic No1 D Regular.svg');
+	src: url('../fonts/Alternate Gothic No1 D Regular.ttf');
+	src: url('../fonts/Alternate Gothic No1 D Regular.woff');
+}
+@font-face {
+	font-family: "Alternate Got No 3 D";
+	src: url('../fonts/Alternate Gothic No3 D Regular.otf');
+	src: url('../fonts/Alternate Gothic No3 D Regular.eot');
+	src: url('../fonts/Alternate Gothic No3 D Regular.svg');
+	src: url('../fonts/Alternate Gothic No3 D Regular.ttf');
+	src: url('../fonts/Alternate Gothic No3 D Regular.woff');
+}
+@font-face {
+	font-family: "Akzidenz Grotesk BE";
+	src: url('../fonts/Akzidenz Grotesk BE.otf');
+	src: url('../fonts/Akzidenz Grotesk BE.eot');
+	src: url('../fonts/Akzidenz Grotesk BE.svg');
+	src: url('../fonts/Akzidenz Grotesk BE.ttf');
+	src: url('../fonts/Akzidenz Grotesk BE.woff');
+}
+
+body {
+	h1 {
+		font: 400 75px 'Alternate Got No1 D', regular;
+		text-transform: uppercase;
+		color: #b5cbd1;
+		padding-bottom: 31px;
+	}
+	a {
+		font: 400 10px 'Alternate Got No3 D', regular;
+		text-decoration: none;
+		color: #ffffff;
+	}
+	p, span{
+		font: 300 10px 'Akzidenz Grotesk B E', lightCn;
+		color: #b5cbd1;
+	}
+	ul {
+		list-style: none;
+	}
+	.main-content {
+		background-color: #0f1318;
+	}
+}
+
+@import "header";
+@import "home-content";
+@import "directors-page";
+@import "taxonomy";

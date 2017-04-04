@@ -1,0 +1,52 @@
+.main-content {
+  padding-bottom: 5rem;
+  .directors-info-block {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid #d81406;
+  }
+  .directors-photo {
+    width: 100%;
+  }
+  h2 {
+    margin-top: 10px;
+  }
+  .directors-info {
+    p {
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+  }
+  .directors-work {
+    color: #b5cbd1;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  a {
+    color: #d61919;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    text-decoration: none;
+    &:visited {
+      color: #d61919;;
+    }
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .directors-info {
+      p {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+      }
+    }
+    a, .directors-work {
+      font-size: 2.3rem;
+    }
+  }
+}
