@@ -14,43 +14,41 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <main class="main-content">
+        <section class="container main-info">
+            <?php if ( have_posts() ) : ?>
+                <?php
+                while ( have_posts() ) : the_post();
+                    the_content();
+                endwhile;
+            endif; ?>
+        </section>
+        <section class="media-content">
+            <h1 class="container main-title">
+                <?php
+                $title = get_post_custom_values('title-section');
+                foreach( $title as $key => $value ) {
+                    echo "$value";
+                }
+                ?>
+            </h1>
+            <div class="media-block">
+                <div class="container">
+                    <ul class="row media-list">
+                        <?php
+                        $query = new WP_Query( array('post_type' => 'films-reviews', 'posts_per_page' => 6 ) );
+                        if ($query->have_posts()):?>
+                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                                <li class="col-sm-6 col-md-4">
+                                    <a class="popup-youtube-link" href="<?php echo get_the_excerpt(); ?>"><?php the_post_thumbnail('full', 'class=img-responsive'); ?></a>
+                                    <span><?php the_post_thumbnail_caption(); ?></span>
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; wp_reset_postdata(); ?>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
