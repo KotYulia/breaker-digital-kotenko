@@ -19,14 +19,14 @@ get_header(); ?>
         endif; ?>
     </section>
     <section class="media-content">
-        <h1 class="container main-title">
-            <?php
-            $title = get_post_custom_values('title-section');
-            foreach( $title as $key => $value ) {
-                echo "$value";
-            }
-            ?>
-        </h1>
+<!--        <h1 class="container main-title">-->
+<!--            --><?php
+//            $title = get_post_custom_values('title-section');
+//            foreach( $title as $key => $value ) {
+//                echo "$value";
+//            }
+//            ?>
+<!--        </h1>-->
         <div class="media-block">
             <div class="container">
                 <ul class="row media-list">
